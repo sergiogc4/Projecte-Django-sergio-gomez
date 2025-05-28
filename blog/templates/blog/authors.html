@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    Autors - El meu Blog
+{% endblock %}
+
+{% block content %}
+<section class="authors-section">
+    <h1>Autors</h1>
+    <ul class="authors-list">
+        {% for author in authors %}
+            <li class="author-card">
+                <h5>{{ author.first_name }} {{ author.last_name }}</h5>
+                <a href="{% url 'author-detail' author.id %}" class="btn btn-primary">Veure pàgina</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

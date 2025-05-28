@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}
+    Tots els Posts - El meu Blog
+{% endblock %}
+
+{% block content %}
+    <section class="all-posts-section mt-5">
+        <h1 class="mb-3">Tots els Posts</h1>
+        <div class="posts-container">
+            {% for post in posts %}
+                {% include "blog/post_card.html" with post=post %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

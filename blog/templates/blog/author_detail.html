@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}{{ author.first_name }} {{ author.last_name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="author-info text-center mb-4">
+        <h1>{{ author.first_name }} {{ author.last_name }}</h1>
+        <p class="text-muted">Email: {{ author.email }}</p>
+    </div>
+
+    <div class="posts-container">
+        {% for post in posts %}
+            {% include "blog/post_card.html" with post=post %}
+        {% empty %}
+            <p class="text-center">Aquest autor encara no ha publicat cap post.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    Etiquetes - El meu Blog
+{% endblock %}
+
+{% block content %}
+    <section class="tags-section mt-5">
+        <h1 class="mb-3">Etiquetes</h1>
+        <ul class="tags-list">
+            {% for tag in tags %}
+                <li>
+                    <a href="{% url 'tag-detail' tag.id %}" class="tag-link">{{ tag.tag }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

@@ -1,0 +1,260 @@
+/* Cos general */
+body {
+    background-color: #f4f6f8;
+    color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header gran amb imatge */
+.hero-header {
+    background-image: url("imatges/top.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero-header p {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Navbar bàsica */
+.navbar {
+    background-color: #1f2937;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #e5e7eb;
+    margin-left: 20px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+    color: #93c5fd;
+}
+
+/* Contingut principal */
+.container {
+    padding: 20px;
+}
+
+/* Peu de pàgina */
+footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Estil per a la graella de posts */
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Targetes lleugerament més grans */
+.post-card {
+    width: 300px;
+    height: 420px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-card .card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #374151;
+    overflow: hidden;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* Autors */
+.authors-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.authors-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.authors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.author-card {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    width: 220px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.author-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.author-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.author-card .btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.author-card .btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Tags */
+.tags-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.tags-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.tags-list li {
+    background-color: #e5e7eb;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.tags-list li a {
+    text-decoration: none;
+    color: #111827;
+}
+
+.tags-list li:hover {
+    background-color: #d1d5db;
+}
+
+/* Tags dins dels posts */
+.detail-tags,
+.card-tags {
+    margin-top: 10px;
+}
+
+.detail-tags a,
+.card-tags a {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.detail-tags a:hover,
+.card-tags a:hover {
+    background-color: #bfdbfe;
+}

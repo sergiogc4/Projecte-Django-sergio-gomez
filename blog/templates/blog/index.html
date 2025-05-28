@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}Inici{% endblock %}
+
+{% block content %}
+
+<!-- Hero header -->
+<div class="hero-header">
+    <h1>Benvingut al blog</h1>
+    <p>Descobreix els últims articles</p>
+</div>
+
+<!-- Secció de posts -->
+<section id="posts" class="mt-5">
+    <div class="container">
+        <h2 class="mb-3">Els darrers Posts</h2>
+        <div class="posts-container">
+            {% for post in posts %}
+                {% include "blog/post_card.html" with post=post %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    Error 404 - No trobat
+{% endblock %}
+
+{% block content %}
+    <section class="not-found mt-5">
+        <h1>404 - Pàgina no trobada</h1>
+        <p>La pàgina que estàs buscant no existeix o ha estat eliminada.</p>
+        <a href="{% url 'starting-page' %}">Torna a l'inici</a>
+    </section>
+{% endblock %}

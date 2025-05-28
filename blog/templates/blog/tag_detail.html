@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% load static %}  
+{% block title %}
+    Posts amb la etiqueta "{{ tag.tag }}"
+{% endblock %}
+
+{% block content %}
+    <h1>Posts amb la etiqueta "{{ tag.tag }}"</h1>
+    <div class="posts-container">
+        {% for post in posts %}
+            <div class="post-card">
+                <img src="{% static 'blog/imatges/' %}{{ post.image_name }}" alt="{{ post.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                    <small class="text-muted">Per 
+                        <a href="{% url 'author-detail' post.author.id %}">
+                            {{ post.author }}
+                        </a> - {{ post.date }}
+                    </small>
+                    <a href="{% url 'post-detail' post.slug %}" class="btn btn-primary mt-2">Llegir més</a>
+                </div>
+            </div>
+        {% empty %}
+            <p>No hi ha posts amb aquesta etiqueta.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
