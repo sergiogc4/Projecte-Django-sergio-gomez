@@ -54,3 +54,9 @@ Després d'executar el servidor, pots accedir a l'aplicació a:
 ---
 
 **Nota:** Assegura't de tenir instal·lades totes les dependències abans d'executar el projecte.
+
+## 📄 Documentació
+
+La documentació generada automàticament amb Pydoc està disponible a:  
+[https://sergiogc4.github.io/Projecte-Django-sergio-gomez/](https://sergiogc4.github.io/Projecte-Django-sergio-gomez/)
+
