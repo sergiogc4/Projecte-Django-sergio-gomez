@@ -1,6 +1,6 @@
 # Projecte-Django-sergio-gomez
 # README
-
+ 
 ## Introducció
 
 Descripció breu del projecte i objectius principals.
